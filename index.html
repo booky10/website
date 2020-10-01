@@ -1,5 +1,6 @@
 <html>
   <head>
+    <!-- Site meta-->
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -7,12 +8,20 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="booky10" />
-    <link rel="shortcut icon" type="image/png" href="assets/logo.png" />
 
+    <!-- Title & Logo -->
+    <link rel="shortcut icon" type="image/png" href="assets/logo.png" />
     <title>booky10 - Home</title>
 
+    <!-- CSS Scripts -->
     <link href="code/css/style.css" rel="stylesheet" />
+    <link href="code/css/font.css" rel="stylesheet" />
 
+    <!-- JavaScript Scripts -->
+    <script src="code/js/jquery-3.5.1.min.js"></script>
+    <script src="code/js/main.js"></script>
+
+    <!-- Twitch Scripts -->
     <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script
       src="https://apis.google.com/js/platform.js"
@@ -20,18 +29,24 @@
     ></script>
   </head>
 
-  <body id="page-top">
-    <h1>Nothing to see right now!</h1>
+  <body class="fade-in">
+    <span id="loader" class="fade-out"></span>
+    <div id="top">
+      <div id="top" class="centered">
+        <h1>booky10</h1>
+        <span id="description">Minecraft Plugin/Client Coder</span>
+      </div>
+    </div>
 
-    <!-- JavaScript Scripts -->
-    <script src="code/js/jquery-3.5.1.min.js"></script>
-    <script src="code/js/main.js"></script>
-    <script type="text/javascript">
-      var options = {
-        channel: "booky10",
-      };
-      var player = new Twitch.Player("stream", options);
-      player.setVolume(0.0);
-    </script>
+    <iframe
+      src="https://player.twitch.tv/?channel=booky10&muted=true&parent=localhost"
+      width="480"
+      height="270"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen="true"
+      id="stream"
+    >
+    </iframe>
   </body>
 </html>

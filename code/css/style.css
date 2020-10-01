@@ -1,0 +1,25 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+
+  background-color: rgb(54, 57, 63);
+  color: rgb(255, 255, 255);
+}
+
+.centered {
+  text-align: center;
+}
+
+#title {
+  top: 100px;
+
+  position: relative;
+}
+
+#stream {
+  position: absolute;
+
+  top: 5%;
+  right: 5%;
+}
