@@ -13,9 +13,14 @@ function refreshLanguageText() {
   $(".lang-de").hide();
   $(".lang-en").hide();
 
-  if (document.cookie.startsWith("lang=de")) {
-    $(".lang-de").fadeIn(1000);
-  } else {
-    $(".lang-en").fadeIn(1000);
-  }
+  if (document.cookie.startsWith("lang=de")) $(".lang-de").fadeIn(1000);
+  else $(".lang-en").fadeIn(1000);
+}
+
+function writeCopyright() {
+  document.write("&copy; " + new Date().getFullYear() + " booky.tk. Made by booky10.");
+}
+
+function addLines(amount) {
+  for (let i = 0; i < amount; i++) document.write("<br>");
 }

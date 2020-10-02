@@ -38,10 +38,6 @@ body {
   left: 1.125%;
 }
 
-strong {
-  font-weight: bolder;
-}
-
 .bordered {
   border-style: solid;
   border-color: black;
@@ -76,4 +72,13 @@ a:any-link {
 
   font-size: 40px;
   font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  display: table;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50%;
 }
