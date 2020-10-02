@@ -63,3 +63,17 @@ img:hover {
   -ms-user-select: none;
   user-select: none;
 }
+
+a:any-link {
+  color: #fdcc52;
+  text-decoration: none;
+}
+
+.main-link {
+  position: absolute;
+  top: 2.5%;
+  left: 9%;
+
+  font-size: 40px;
+  font-weight: bold;
+}
