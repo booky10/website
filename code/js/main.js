@@ -2,6 +2,8 @@ $(document).ready(function () {
   $(".fade-out").show().fadeOut(1000);
   $(".fade-in").hide().fadeIn(1000);
   $(".hide").hide();
+
+  prepareMobile();
 });
 
 function setLanguage(language) {
@@ -34,4 +36,14 @@ function writeCopyright() {
 
 function addLines(amount) {
   for (let i = 0; i < amount; i++) document.write("<br>");
+}
+
+function prepareMobile() {
+  alert(screen);
+  if (
+    /Mobile|Phone|Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  )
+    $(".anti-phone").delay(1100).hide();
 }
