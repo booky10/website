@@ -20,40 +20,69 @@
     <!-- JavaScript Scripts -->
     <script src="code/js/jquery-3.5.1.min.js"></script>
     <script src="code/js/main.js"></script>
+
     <script
       src="https://apis.google.com/js/platform.js"
       gapi_processed="true"
     ></script>
   </head>
 
-  <body class="fade-in">
-    <div id="top">
-      <div class="centered">
-        <h1>booky10</h1>
-        <span id="description">Minecraft Plugin & Client Coder</span>
+  <body>
+    <div class="fade-in">
+      <div id="top">
+        <div class="centered">
+          <h1><strong>booky10</strong></h1>
+          <span id="description" class="lang-en">Minecraft Plugin & Client Coder</span>
+          <span id="description" class="lang-de">Minecraft Plugin & Client Programmierer</span>
+        </div>
+      </div>
+
+      <!-- Frames (Discord & Twitch) -->
+      <iframe
+        src="https://player.twitch.tv/?channel=booky10&muted=true&parent=booky.tk"
+        width="480"
+        height="270"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+        id="stream"
+      >
+      </iframe>
+
+      <iframe
+        src="https://discordapp.com/widget?id=741481245585702932&theme=dark"
+        width="480"
+        height="500"
+        allowtransparency="true"
+        frameborder="0"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        id="discord"
+      ></iframe>
+    </div>
+
+    <div id="lang">
+      <div class="lang-de">
+        <img
+          onclick="setLanguage('en')"
+          src="assets/flags/en.png"
+          width="106.25"
+          height="55.75"
+          class="lang-icon"
+        />
+      </div>
+      <div class="lang-en">
+        <img
+          onclick="setLanguage('de')"
+          src="assets/flags/de.png"
+          width="106.25"
+          height="55.75"
+          class="lang-icon"
+        />
       </div>
     </div>
 
-    <iframe
-      src="https://player.twitch.tv/?channel=booky10&muted=true&parent=booky.tk"
-      width="480"
-      height="270"
-      frameborder="0"
-      scrolling="no"
-      allowfullscreen="true"
-      id="stream"
-    >
-    </iframe>
-
-    <iframe
-      src="https://discordapp.com/widget?id=741481245585702932&theme=dark"
-      width="480"
-      height="500"
-      allowtransparency="true"
-      frameborder="0"
-      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-      id="discord"
-      style="position: absolute; top: 38%; right: 5%"
-    ></iframe>
+    <script>
+      refreshLanguageText();
+    </script>
   </body>
 </html>

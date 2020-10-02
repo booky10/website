@@ -30,3 +30,14 @@ body {
   top: 38%;
   right: 5%;
 }
+
+.lang-icon {
+  position: absolute;
+
+  top: 2%;
+  left: 1.125%;
+}
+
+strong {
+  font-weight: bolder;
+}
