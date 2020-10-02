@@ -41,3 +41,25 @@ body {
 strong {
   font-weight: bolder;
 }
+
+.bordered {
+  border-style: solid;
+  border-color: black;
+}
+
+.rounded {
+  border-radius: 25px;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
