@@ -31,13 +31,6 @@ body {
   right: 5%;
 }
 
-.lang-icon {
-  position: absolute;
-
-  top: 2%;
-  left: 1.125%;
-}
-
 .bordered {
   border-style: solid;
   border-color: black;
@@ -81,4 +74,16 @@ footer {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50%;
+}
+
+.lang-icon {
+  position: absolute;
+  top: 2%;
+  left: 1.125%;
+}
+
+.lang-text {
+  position: absolute;
+  top: 7%;
+  left: 2.5%;
 }

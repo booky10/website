@@ -63,24 +63,27 @@
     </div>
 
     <!-- Language Selection -->
-    <div id="lang">
-      <div class="lang-de">
-        <img
-          onclick="setLanguage('en')"
-          src="assets/flags/en.png"
-          width="106.25"
-          height="55.75"
-          class="lang-icon bordered"
-        />
+    <div id="lang" class="fade-in">
+      <div id="lang-icons" class="lang-icon bordered">
+        <div class="lang-de">
+          <img
+            onclick="setLanguage('en')"
+            src="assets/flags/en.png"
+            width="106.25"
+            height="55.75"
+          />
+        </div>
+        <div class="lang-en">
+          <img
+            onclick="setLanguage('de')"
+            src="assets/flags/de.png"
+            width="106.25"
+            height="55.75"
+          />
+        </div>
       </div>
-      <div class="lang-en">
-        <img
-          onclick="setLanguage('de')"
-          src="assets/flags/de.png"
-          width="106.25"
-          height="55.75"
-          class="lang-icon bordered"
-        />
+      <div class="lang-text">
+        <p id="lang-text">Loading...</p>
       </div>
     </div>
 
