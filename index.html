@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <!-- Site meta-->
     <meta charset="utf-8" />
@@ -6,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
+    <meta name="description" content="The official website from booky10" />
     <meta name="author" content="booky10" />
 
     <!-- Title & Logo -->
@@ -14,103 +15,216 @@
     <title>booky10 - Home</title>
 
     <!-- CSS Scripts -->
-    <link href="code/css/style.css" rel="stylesheet" />
-    <link href="code/css/font.css" rel="stylesheet" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/scrolling-nav.css" rel="stylesheet" />
 
-    <!-- JavaScript Scripts -->
-    <script src="code/js/jquery-3.5.1.min.js"></script>
-    <script src="code/js/main.js"></script>
+    <!-- Preloaded JavaScript Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/utils.js"></script>
   </head>
 
-  <body oncontextmenu="return false;">
-    <div class="fade-in">
-      <div id="top" class="noselect">
-        <div class="centered">
-          <h1>booky10</h1>
-
-          <span class="bordered rounded" id="description">
-            <span class="lang-en"> Minecraft Plugin & Client Coder </span>
-            <span class="lang-de">
-              Minecraft Plugin & Client Programmierer
-            </span>
-          </span>
-        </div>
-      </div>
-
-      <!-- IFrames (Discord & Twitch) -->
-      <div id="iframes" class="anti-phone">
-        <iframe
-          src="https://player.twitch.tv/?channel=booky10&muted=true&parent=booky.tk"
-          width="480"
-          height="270"
-          frameborder="0"
-          scrolling="no"
-          allowfullscreen="true"
-          id="stream"
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">booky.tk</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-        </iframe>
-
-        <iframe
-          src="https://discordapp.com/widget?id=741481245585702932&theme=dark"
-          width="480"
-          height="500"
-          allowtransparency="true"
-          frameborder="0"
-          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-          id="discord"
-        ></iframe>
-      </div>
-    </div>
-
-    <!-- Language Selection -->
-    <div id="lang" class="fade-in">
-      <div id="lang-icons" class="lang-icon bordered">
-        <div class="lang-de">
-          <img
-            onclick="setLanguage('en')"
-            src="assets/flags/en.png"
-            width="106.25"
-            height="55.75"
-          />
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger lang-en" href="#about">
+                About
+              </a>
+              <a class="nav-link js-scroll-trigger lang-de" href="#about">
+                &Uuml;ber
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger lang-en" href="#projects">
+                Projects
+              </a>
+              <a class="nav-link js-scroll-trigger lang-de" href="#projects">
+                Projekte
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger lang-en" href="#contact">
+                Contact
+              </a>
+              <a class="nav-link js-scroll-trigger lang-de" href="#contact">
+                Kontakt
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle lang-en"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Language
+              </a>
+              <a
+                class="nav-link dropdown-toggle lang-de"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Sprache
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" onclick="setLanguage('de')" href="#">
+                  Deutsch
+                </a>
+                <a class="dropdown-item" onclick="setLanguage('en')" href="#">
+                  English
+                </a>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="lang-en">
-          <img
-            onclick="setLanguage('de')"
-            src="assets/flags/de.png"
-            width="106.25"
-            height="55.75"
-          />
+      </div>
+    </nav>
+
+    <header class="bg-dark text-white" id="header">
+      <div class="container text-center">
+        <h1 class="lang-en">Welcome to the website of booky10</h1>
+        <h1 class="lang-de">Willkommen auf der Website von booky10</h1>
+        <p class="lead lang-en">A minecraft plugin and client developer</p>
+        <p class="lead lang-de">Ein minecraft plugin und client developer</p>
+      </div>
+    </header>
+
+    <section id="about" class="bg-darker">
+      <div class="container text-white">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="lang-en">
+              <h2>About me (booky10)</h2>
+              <p class="lead">
+                I'm a minecraft developer, who develops minecraft clients and
+                plugins. Sometimes I also develop discord bots. Most of the
+                things I do are just for fun.
+              </p>
+            </div>
+            <div class="lang-de">
+              <h2>&Uuml;ber mich (booky10)</h2>
+              <p class="lead">
+                Ich bin ein Minecraft developer, welcher Minecraft Clients und
+                Plugins programmiert. Manchmal programiere ich auch Discord
+                Bots. Die meisten Sachen, welche ich mache, sind einfach nur aus
+                Spa&szlig;.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="lang-text">
-        <p id="lang-text">Loading...</p>
-      </div>
-    </div>
+    </section>
 
-    <!-- Main link at the top left of the page -->
-    <a class="main-link fade-in anti-phone" href="https://booky.tk/">booky.tk</a>
+    <section id="projects" class="bg-dark">
+      <div class="container text-white">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="lang-de">
+              <h2>Projekte</h2>
+              <p class="lead">
+                Die meistens meiner Projekte sind auf GitHub downloadbar, ich
+                habe insgesamt aktuell 47 Repositories dort, 26 davon sind
+                f&uuml;r jeden sichtbar. Das gr&ouml;&szlig;te Projekt von allen
+                ist im Moment der
+                <a href="https://bookyclient.tk/de/">bookyClient</a>.
+              </p>
+            </div>
+            <div class="lang-en">
+              <h2>Projekte</h2>
+              <p class="lead">
+                Most of my projects are availible on GitHub. I have 47
+                repositories at the moment, 26 of them are public. Currently my
+                biggest project is the
+                <a href="https://bookyclient.tk/en/">bookyClient</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-darker">
+      <div class="container text-white">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="lang-en">
+              <h2>Contact</h2>
+              <p class="lead">
+                The best way to contact me is through discord, my name there is
+                booky10#6666. I also have a
+                <a href="https://discord.gg/XSB7jn9">discord server</a>, where
+                you can join. Another way to contact me is through
+                <a href="mailto:contact@booky.tk">e-mail</a>.
+              </p>
+            </div>
+            <div class="lang-de">
+              <h2>Kontakt</h2>
+              <p class="lead">
+                Der beste weg mich zu kontaktieren ist &uuml;ber Discord, mein
+                name dort lautet booky10#6666. Du kannst auch auf meinen
+                <a href="https://discord.gg/XSB7jn9">Discord Server</a> joinen.
+                Ein anderer Web mich zu kontaktieren ist durch
+                <a href="mailto:kontakt@booky.tk">E-Mail</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-5 bg-primary">
+      <div class="container">
+        <p class="m-0 text-center text-white" id="copyright">
+          <script>
+            writeCopyright();
+          </script>
+        </p>
+        <address class="m-0 text-center">
+          <p id="e-mail" class="text-white">
+            E-Mail:
+            <a href="mailto:contact@booky.tk" class="text-white lang-en">
+              contact@booky.tk
+            </a>
+            <a href="mailto:kontakt@booky.tk" class="text-white lang-de">
+              kontakt@booky.tk
+            </a>
+          </p>
+        </address>
+      </div>
+    </footer>
+
+    <!-- JavaScript Scripts -->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
     <script>
       refreshLanguageText();
     </script>
-
-    <footer class="anti-phone">
-      <p id="copyright">
-        <script>
-          writeCopyright();
-        </script>
-      </p>
-      <address>
-        <p id="e-mail">
-          Mail:
-          <a href="mailto:contact@booky.tk">contact@booky.tk</a>
-        </p>
-      </address>
-      <p id="footer-lines">
-        <script>
-          addLines(10);
-        </script>
-      </p>
-    </footer>
   </body>
 </html>
