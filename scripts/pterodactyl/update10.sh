@@ -17,7 +17,7 @@ OLD_DIRECTORY="${PWD}"
 PTERODACTYL_DIRECTORY='/var/www/pterodactyl'
 
 echo 'Info: Checking if version provided'
-if [ "${VERSION}" = '' ]; then
+if [ "${VERSION}" = 'v' ]; then
   echo 'Error: Please provide a version to update to!'
   exit
 fi
@@ -32,7 +32,7 @@ while true; do
   echo "Info: Do you want to update the panel to ${VERSION}?"
   echo 'Warning: DO NOT USE THIS ON CentOS!'
   echo 'Warning: DO NOT USE THIS TO UPGRADE FROM 0.7 TO 1.0!'
-  read -p 'Info: [Y(es)/N(o)]' yn
+  read -p 'Info: [Y(es)/N(o)] ' yn
   case $yn in
   [Yy]*) break ;;
   [Nn]*) exit ;;
@@ -47,7 +47,7 @@ echo 'Debug: Turning maintenance mode on'
 php artisan down || exit
 
 
-if [ -e "${PTERODACTYL_DIRECTORY}/panel.tar.gz" ]
+if [ -e "${PTERODACTYL_DIRECTORY}/panel.tar.gz" ]; then
   echo 'Debug: Old panel.tar.gz found, deleting it'
   rm -rf "${PTERODACTYL_DIRECTORY}/panel.tar.gz" || exit
 fi
@@ -56,7 +56,7 @@ echo 'Debug: Downloading new files'
 curl -L -o 'panel.tar.gz' "https://github.com/pterodactyl/panel/releases/download/${VERSION}/panel.tar.gz" || exit
 
 echo 'Debug: Unpacking new files'
-tar -xzv 'panel.tar.gz' || exit
+tar -xzvf 'panel.tar.gz' || exit
 rm -f 'panel.tar.gz' || exit
 
 echo 'Debug: Applying permissions'

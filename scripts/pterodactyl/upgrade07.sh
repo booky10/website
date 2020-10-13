@@ -26,7 +26,7 @@ while true; do
   echo 'Info: Do you want to upgrade to panel 1.0?'
   echo 'Warning: DO NOT USE THIS ON CentOS!'
   echo 'Warning: THERE IS NO OFFICIAL WAY OF GOING BACK!'
-  read -p 'Info: [Y(es)/N(o)]' yn
+  read -p 'Info: [Y(es)/N(o)] ' yn
   case $yn in
   [Yy]*) break ;;
   [Nn]*) exit ;;
@@ -41,7 +41,7 @@ echo 'Debug: Turning maintenance mode on'
 php artisan down || exit
 
 
-if [ -e "${PTERODACTYL_DIRECTORY}/panel.tar.gz" ]
+if [ -e "${PTERODACTYL_DIRECTORY}/panel.tar.gz" ]; then
   echo 'Debug: Old panel.tar.gz found, deleting it'
   rm -rf "${PTERODACTYL_DIRECTORY}/panel.tar.gz" || exit
 fi
