@@ -6,7 +6,7 @@
 ##############################################
 
 echo 'Debug: Checking user'
-if [ "${EUID}" -ne 0 ]; then
+if [ "${USER}" != 'root' ]; then
   echo "Error: Please run as root, you are ${USER}!"
   exit
 fi

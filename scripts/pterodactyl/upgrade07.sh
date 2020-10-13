@@ -5,7 +5,8 @@
 #         version 0.7 to version 1.0         #
 ##############################################
 
-if [ "${EUID}" -ne 0 ]; then
+echo 'Debug: Checking user'
+if [ "${USER}" != 'root' ]; then
   echo "Error: Please run as root, you are ${USER}!"
   exit
 fi
