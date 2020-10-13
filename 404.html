@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <!-- Site meta -->
@@ -14,9 +15,15 @@
     <title>booky10 - Test</title>
 
     <!-- Forward -->
-    <meta http-equiv="refresh" content="0; url='https://www.youtube.com/watch?v=dQw4w9WgXcQ'"/>
-  </head>
+    <script>
+      var url;
+      var random = Math.floor(Math.random() * 2);
 
-  <body>
-  </body>
+      if (random == 0) url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      else url = "https://www.youtube.com/watch?v=jeg_TJvkSjg";
+
+      window.location.href = url;
+    </script>
+  </head>
+  <body></body>
 </html>
