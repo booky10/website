@@ -17,20 +17,6 @@ if [ ! -e "${PTERODACTYL_DIRECTORY}" ]; then
   exit
 fi
 
-if [ "${1}" != '-y' ]; then
-  while true; do
-    echo "Info: Do you want to update the panel?"
-    echo 'Warning: DO NOT USE THIS ON CentOS!'
-    echo 'Warning: DO NOT USE THIS TO UPGRADE FROM 0.7 TO 1.0!'
-    read -p 'Info: [Y(es)/N(o)] ' yn
-    case $yn in
-    [Yy]*) break ;;
-    [Nn]*) exit ;;
-    *) echo 'Error: Please answer yes or no!' ;;
-    esac
-  done
-fi
-
 echo 'Info: Starting update'
 cd "${PTERODACTYL_DIRECTORY}"
 
