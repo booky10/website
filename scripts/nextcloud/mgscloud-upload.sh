@@ -14,4 +14,4 @@ fi
 
 
 echo "Uploading ${FILE}... (Folder: ${FOLDER})"
-curl -T "${FILE}" -u "${FOLDER}":'' -H 'X-Requested-With: XMLHttpRequest' -H 'X-Method-Override: PUT' "${URL}${WEBDAV}${REMOTE}"
+curl -T "${FILE}" -u "${FOLDER}":'' -H 'X-Requested-With: XMLHttpRequest' -H 'X-Method-Override: REPLEASE' "${URL}${WEBDAV}${REMOTE}"
