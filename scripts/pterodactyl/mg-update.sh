@@ -7,7 +7,7 @@ if [ "${USER}" != 'root' ]; then
 fi
 
 echo 'Info: Setting values'
-URL='https://mgscloud.net/index.php/s/p4M4zTS5cqT6t47/download?path=%2F&files=latest-panel.tar.gz'
+URL='https://mgscloud.net/index.php/s/tDmrwFXingmGRXX/download?path=%2F&files=latest-panel.tar.gz'
 OLD_DIRECTORY="${PWD}"
 PTERODACTYL_DIRECTORY='/var/www/pterodactyl'
 
