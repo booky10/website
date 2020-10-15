@@ -46,7 +46,6 @@ cd "${PTERODACTYL_DIRECTORY}"
 echo 'Debug: Turning maintenance mode on'
 php artisan down || exit
 
-
 if [ -e "${PTERODACTYL_DIRECTORY}/panel.tar.gz" ]; then
   echo 'Debug: Old panel.tar.gz found, deleting it'
   rm -rf "${PTERODACTYL_DIRECTORY}/panel.tar.gz" || exit
@@ -76,13 +75,12 @@ php artisan db:seed --force
 echo 'Debug: Setting permission for www-data'
 chown -R www-data:www-data *
 
-
 echo 'Debug: Restarting queue worker'
 php artisan queue:restart
 
 echo 'Debug: Turning maintenance mode off'
 php artisan up
 
-echo 'Info: Done upgrading to pterodactyl panel 1.0!'
+echo "Info: Done upgrading to panel ${VERSION}!"
 cd "${OLD_DIRECTORY}"
 exit
