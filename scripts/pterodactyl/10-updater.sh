@@ -16,9 +16,9 @@ URL="${1}"
 OLD_DIRECTORY="${PWD}"
 PTERODACTYL_DIRECTORY='/var/www/pterodactyl'
 
-echo 'Info: Checking if version provided'
+echo 'Info: Checking if url provided'
 if [ "${URL}" = '' ]; then
-  echo 'Error: Please provide a version to update to!'
+  echo 'Error: Please provide a url to update to!'
   exit
 fi
 
