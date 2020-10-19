@@ -17,10 +17,11 @@
     <!-- Forward -->
     <script>
       var url;
-      var random = Math.floor(Math.random() * 2);
+      var random = Math.floor(Math.random() * 3);
 
       if (random == 0) url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-      else url = "https://www.youtube.com/watch?v=jeg_TJvkSjg";
+      else if (random == 1) url = "https://www.youtube.com/watch?v=jeg_TJvkSjg";
+      else url = "https://www.youtube.com/watch?v=cE0wfjsybIQ&t=75";
 
       window.location.href = url;
     </script>
