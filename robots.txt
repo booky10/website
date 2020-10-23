@@ -1,0 +1,6 @@
+# Allow everyone
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://booky.tk/sitemap.xml
