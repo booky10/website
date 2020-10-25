@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Site meta-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="The official website from booky10" />
+    <meta name="author" content="booky10" />
+
+    <!-- Title & Logo -->
+    <link rel="shortcut icon" type="image/png" href="../assets/logo.png" />
+    <title>booky10 - Spuuuuuuuuuuuuuuuuuuuuuuuuky</title>
+
+    <!-- CSS Scripts -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/scrolling-nav.css" rel="stylesheet" />
+
+    <!-- Preloaded JavaScript Scripts -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../js/utils.js"></script>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">booky.tk</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger lang-en" href="#about">
+                About
+              </a>
+              <a class="nav-link js-scroll-trigger lang-de" href="#about">
+                &Uuml;ber
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#downloads">
+                Downloads
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle lang-en"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Language
+              </a>
+              <a
+                class="nav-link dropdown-toggle lang-de"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Sprache
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" onclick="setLanguage('de')" href="#">
+                  Deutsch
+                </a>
+                <a class="dropdown-item" onclick="setLanguage('en')" href="#">
+                  English
+                </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href=".."> Home </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-dark text-white" id="header">
+      <div class="container text-center py-5">
+        <h1 class="lang-en">Welcome to the website of booky10</h1>
+        <h1 class="lang-de">Willkommen auf der Website von booky10</h1>
+      </div>
+    </header>
+
+    <section id="about" class="bg-darker">
+      <div class="container text-white">
+        <div class="row py-5">
+          <div class="col-lg-8 mx-auto">
+            <h1>NEIN!</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-5 bg-primary">
+      <div class="container">
+        <p class="m-0 text-center text-white" id="copyright">
+          <script>
+            writeCopyright();
+          </script>
+        </p>
+        <address class="m-0 text-center">
+          <p id="e-mail" class="text-white">
+            E-Mail:
+            <a href="mailto:contact@booky.tk" class="text-white lang-en">
+              contact@booky.tk
+            </a>
+            <a href="mailto:kontakt@booky.tk" class="text-white lang-de">
+              kontakt@booky.tk
+            </a>
+          </p>
+        </address>
+      </div>
+    </footer>
+
+    <!-- JavaScript Scripts -->
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../js/scrolling-nav.js"></script>
+
+    <script>
+      refreshLanguageText();
+    </script>
+  </body>
+</html>
