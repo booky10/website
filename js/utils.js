@@ -27,9 +27,15 @@ function updateLanguageText(lang) {
 }
 
 function writeCopyright() {
-  document.write(
-    "&copy; " + new Date().getFullYear() + " booky.tk, made by booky10."
-  );
+  if (document.cookie.startsWith("lang=de")) {
+    document.write(
+      "&copy; " + new Date().getFullYear() + " booky.tk, gecodet von booky10."
+    );
+  } else {
+    document.write(
+      "&copy; " + new Date().getFullYear() + " booky.tk, made by booky10."
+    );
+  }
 }
 
 function addLines(amount) {
