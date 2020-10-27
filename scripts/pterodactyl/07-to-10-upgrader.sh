@@ -12,7 +12,7 @@ if [ "${USER}" != 'root' ]; then
 fi
 
 echo 'Info: Setting values'
-VERSION="v${1:-1.0.0}"
+VERSION="v${1:-1.0.2}"
 OLD_DIRECTORY="${PWD}"
 PTERODACTYL_DIRECTORY='/var/www/pterodactyl'
 
@@ -23,7 +23,7 @@ if [ ! -e "${PTERODACTYL_DIRECTORY}" ]; then
 fi
 
 while true; do
-  echo 'Info: Do you want to upgrade to panel 1.0?'
+  echo "Info: Do you want to upgrade to panel ${VERSION}?"
   echo 'Warning: DO NOT USE THIS ON CentOS!'
   echo 'Warning: THERE IS NO OFFICIAL WAY OF GOING BACK!'
   read -p 'Info: [Y(es)/N(o)] ' yn
@@ -80,6 +80,6 @@ php artisan queue:restart
 echo 'Debug: Turning maintenance mode off'
 php artisan up
 
-echo 'Info: Done upgrading to pterodactyl panel 1.0!'
+echo "Info: Done upgrading to pterodactyl panel ${VERSION}!"
 cd "${OLD_DIRECTORY}"
 exit
