@@ -16,6 +16,12 @@ function refreshLanguageText() {
   if (document.cookie.startsWith("lang=de")) {
     $(".lang-de").show();
     updateLanguageText("Deutsch");
+  } else if (document.cookie.startsWith("lang=")) {
+    var userLang = navigator.language || navigator.userLanguage;
+    if (userLang == "de-DE")
+      setLanguage("de")
+    else
+      setLanguage("en")
   } else {
     $(".lang-en").show();
     updateLanguageText("English");
