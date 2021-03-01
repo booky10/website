@@ -1,15 +1,11 @@
-header {
-  padding: 156px 0 100px;
-}
-
-section {
-  padding: 150px 0;
-}
-
 .bg-darkest {
   background-color: #292225;
 }
 
 .bg-darker {
   background-color: #2f3136;
+}
+
+.bg-primary {
+  background-color: #004085 !important;
 }
