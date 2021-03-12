@@ -19,6 +19,7 @@ function getLanguage() {
 
 function reloadText(language) {
   const i18n = document.getElementsByClassName('i18n');
+  if (i18n.length <= 0) return;
 
   getJSON(location.protocol + '//' + location.host + '/assets/language/' + language + '.json', (json) => {
     console.log('Loaded language ' + language + ': ' + JSON.stringify(json));
