@@ -1,239 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Site meta-->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="The official website from booky10" />
-    <meta name="author" content="booky10" />
 
-    <!-- Title & Logo -->
-    <link rel="shortcut icon" type="image/png" href="../assets/logo.png" />
-    <title>booky10 - MCP</title>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="author" content="booky10"/>
 
-    <!-- CSS Scripts -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../css/scrolling-nav.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="../assets/logo.png"/>
+  <title>booky10 - MCP</title>
 
-    <!-- Preloaded JavaScript Scripts -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../js/utils.js"></script>
-  </head>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../assets/css/style.css" rel="stylesheet"/>
 
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
-      id="mainNav"
-    >
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="..#page-top">booky.tk</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger lang-en" href="#about">
-                About
-              </a>
-              <a class="nav-link js-scroll-trigger lang-de" href="#about">
-                &Uuml;ber
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#downloads">
-                Downloads
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle lang-en"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Language
-              </a>
-              <a
-                class="nav-link dropdown-toggle lang-de"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Sprache
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" onclick="setLanguage('de')" href="#">
-                  Deutsch
-                </a>
-                <a class="dropdown-item" onclick="setLanguage('en')" href="#">
-                  English
-                </a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href=".."> Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#page-top">
-                MCP
-              </a>
-            </li>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+</head>
+
+<body id="page-top">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="main-nav">
+  <div class="container">
+    <a class="navbar-brand i18n" href=".." translation="website.name"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link i18n" href="../index.html#about" translation="navigation.about"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link i18n" href="../index.html#projects"
+             translation="navigation.projects"></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle i18n" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false" translation="navigation.language"></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" onclick="setLanguage('de')" href="#">Deutsch</a>
+            <a class="dropdown-item" onclick="setLanguage('en')" href="#">English</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link i18n" href=".." translation="navigation.home"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link i18n" href="#header" translation="navigation.mcp"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-dark text-white" id="header">
+  <div class="container text-center py-5">
+    <h1 class="i18n" translation="mcp.header.title"></h1>
+    <h5 class="i18n" translation="mcp.header.description"></h5>
+  </div>
+</header>
+
+<section id="about" class="bg-darker">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="i18n" translation="mcp.about.title"></h2>
+        <p class="lead i18n" translation="mcp.about.description"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="downloads" class="bg-dark">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="i18n" translation="mcp.downloads.title"></h2>
+        <div class="lead">
+          <ul id="downloads-container">
+            <script>
+              const mcpDownloads = {'940': '1.12', '937': '1.11.2', '931': '1.10', '928': '1.9.4', '918': '1.8.8', '908': '1.7.10'};
+              Object.keys(mcpDownloads).forEach((key) => document.getElementById('downloads-container').innerHTML += '<li class="i18n" translation="mcp.downloads.entry" arguments=\'{"$MCP_VERSION":"' + key + '","$MINECRAFT_VERSION":"' + eval('mcpDownloads[\'' + key + '\']') + '"}\'></li>');
+            </script>
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
+</section>
 
-    <header class="bg-dark text-white" id="header">
-      <div class="container text-center">
-        <h1 class="lang-en">Welcome to the website of booky10</h1>
-        <h1 class="lang-de">Willkommen auf der Website von booky10</h1>
-        <p class="lead lang-en">
-          MCP (Mod Coder Pack) downloads, 1.7.10 to 1.12
-        </p>
-        <p class="lead lang-de">
-          MCP (Mod Coder Pack) downloads, 1.7.10 bis 1.12
-        </p>
-      </div>
-    </header>
+<footer class="py-5 bg-primary">
+  <div class="container">
+    <p class="m-0 text-center text-white i18n" id="copyright" translation="website.footer"></p>
+    <p class="m-0 text-center text-white i18n" id="disclaimer" translation="mcp.disclaimer"></p>
+  </div>
+</footer>
 
-    <section id="about" class="bg-darker">
-      <div class="container text-white">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="lang-en">
-              <h2>About MCP</h2>
-              <p class="lead">
-                It can decompile minecraft and you can recompile it, to
-                implement mods and other things.
-              </p>
-            </div>
-            <div class="lang-de">
-              <h2>&Uuml;ber MCP</h2>
-              <p class="lead">
-                Es kann Minecraft decompilieren und du kannst es erneut
-                compilieren. Dies kann genutzt werden
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../assets/js/scrolling.js"></script>
+<script src="../assets/js/language.js"></script>
 
-    <section id="downloads" class="bg-dark">
-      <div class="container text-white">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Downloads</h2>
-            <div class="lead">
-              <ul>
-                <li>
-                  <a
-                    href="http://www.modcoderpack.com/files/mcp940.zip"
-                    class="text-white"
-                    >MCP 940 - MC 1.12</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="http://www.modcoderpack.com/files/mcp937.zip"
-                    class="text-white"
-                    >MCP 937 - MC 1.11.2</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="http://www.modcoderpack.com/files/mcp931.zip"
-                    class="text-white"
-                    >MCP 931 - MC 1.10</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="http://www.modcoderpack.com/files/mcp928.zip"
-                    class="text-white"
-                    >MCP 928 - MC 1.9.4</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="http://www.modcoderpack.com/files/mcp918.zip"
-                    class="text-white"
-                    >MCP 918 - MC 1.8.8</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="http://www.modcoderpack.com/files/mcp908.zip"
-                    class="text-white"
-                    >MCP 908 - MC 1.7.10</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="py-5 bg-primary">
-      <div class="container">
-        <p class="m-0 text-center text-white" id="copyright">
-          <script>
-            writeCopyright();
-          </script>
-        </p>
-        <p class="m-0 text-center text-white lang-en" id="rights">
-          Downloads took from
-          <a href="http://www.modcoderpack.com/" class="text-white">
-            modcoderpack.com
-          </a>
-        </p>
-        <p class="m-0 text-center text-white lang-de" id="rights">
-          Die Downloads sind von
-          <a href="http://www.modcoderpack.com/" class="text-white">
-            modcoderpack.com
-          </a>
-        </p>
-        <address class="m-0 text-center">
-          <p id="e-mail" class="text-white">
-            E-Mail:
-            <a href="mailto:contact@booky.tk" class="text-white lang-en">
-              contact@booky.tk
-            </a>
-            <a href="mailto:kontakt@booky.tk" class="text-white lang-de">
-              kontakt@booky.tk
-            </a>
-          </p>
-        </address>
-      </div>
-    </footer>
-
-    <!-- JavaScript Scripts -->
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../js/scrolling-nav.js"></script>
-
-    <script>
-      refreshLanguageText();
-    </script>
-  </body>
+</body>
 </html>
