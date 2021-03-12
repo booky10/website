@@ -1,235 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Site meta-->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="The official website from booky10" />
-    <meta name="author" content="booky10" />
 
-    <!-- Title & Logo -->
-    <link rel="shortcut icon" type="image/png" href="assets/logo.png" />
-    <title>booky10 - Home</title>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="author" content="booky10"/>
 
-    <!-- CSS Scripts -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/scrolling-nav.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="assets/logo.png"/>
+  <title>booky10 - Home</title>
 
-    <!-- Preloaded JavaScript Scripts -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/utils.js"></script>
-  </head>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
 
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
-      id="mainNav"
-    >
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">booky.tk</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger lang-en" href="#about">
-                About
-              </a>
-              <a class="nav-link js-scroll-trigger lang-de" href="#about">
-                &Uuml;ber
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger lang-en" href="#projects">
-                Projects
-              </a>
-              <a class="nav-link js-scroll-trigger lang-de" href="#projects">
-                Projekte
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger lang-en" href="#contact">
-                Contact
-              </a>
-              <a class="nav-link js-scroll-trigger lang-de" href="#contact">
-                Kontakt
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle lang-en"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Language
-              </a>
-              <a
-                class="nav-link dropdown-toggle lang-de"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Sprache
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" onclick="setLanguage('de')" href="#">
-                  Deutsch
-                </a>
-                <a class="dropdown-item" onclick="setLanguage('en')" href="#">
-                  English
-                </a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="mcp">
-                MCP
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
 
-    <header class="bg-dark text-white" id="header">
-      <div class="container text-center">
-        <h1 class="lang-en">Welcome to the website of booky10</h1>
-        <h1 class="lang-de">Willkommen auf der Website von booky10</h1>
-        <p class="lead lang-en">A minecraft plugin and client developer</p>
-        <p class="lead lang-de">Ein minecraft Plugin und Client developer</p>
-      </div>
-    </header>
-
-    <section id="about" class="bg-darker">
-      <div class="container text-white">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="lang-en">
-              <h2>About me (booky10)</h2>
-              <p class="lead">
-                I'm a minecraft developer, who develops minecraft clients and
-                plugins. Sometimes I also develop discord bots. Most of the
-                things I do are just for fun.
-              </p>
-            </div>
-            <div class="lang-de">
-              <h2>&Uuml;ber mich (booky10)</h2>
-              <p class="lead">
-                Ich bin ein Minecraft developer, welcher Minecraft Clients und
-                Plugins programmiert. Manchmal programiere ich auch Discord
-                Bots. Die meisten Sachen, welche ich mache, sind einfach nur aus
-                Spa&szlig;.
-              </p>
-            </div>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger i18n" href="#header" translation="website.name"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger i18n" href="#about" translation="navigation.about"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger i18n" href="#projects"
+             translation="navigation.projects"></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle i18n" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false" translation="navigation.language"></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" onclick="setLanguage('de')" href="#">Deutsch</a>
+            <a class="dropdown-item" onclick="setLanguage('en')" href="#">English</a>
           </div>
-        </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger i18n" href="#header" translation="navigation.home"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link i18n" href="mcp" translation="navigation.mcp"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-dark text-white" id="header">
+  <div class="container text-center py-5">
+    <h1 class="i18n" translation="main.header.title"></h1>
+    <h5 class="i18n" translation="main.header.description"></h5>
+  </div>
+</header>
+
+<section id="about" class="bg-darker">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="i18n" translation="main.about.title"></h2>
+        <p class="lead i18n" translation="main.about.description"></p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="projects" class="bg-dark">
-      <div class="container text-white">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="lang-en">
-              <h2>Projects</h2>
-              <p class="lead">
-                Most of my projects are availible on GitHub. I have 47
-                repositories at the moment, 26 of them are public. Currently my
-                biggest project is the
-                <a href="https://bookyclient.tk/en/">bookyClient</a>.
-              </p>
-            </div>
-            <div class="lang-de">
-              <h2>Projekte</h2>
-              <p class="lead">
-                Die meistens meiner Projekte sind auf GitHub downloadbar, ich
-                habe insgesamt aktuell 47 Repositories dort, 26 davon sind
-                f&uuml;r jeden sichtbar. Das gr&ouml;&szlig;te Projekt von allen
-                ist im Moment der
-                <a href="https://bookyclient.tk/de/">bookyClient</a>.
-              </p>
-            </div>
-          </div>
-        </div>
+<section id="projects" class="bg-dark">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="i18n" translation="main.projects.title"></h2>
+        <p class="lead i18n" translation="main.projects.description"></p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="contact" class="bg-darker">
-      <div class="container text-white">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="lang-en">
-              <h2>Contact</h2>
-              <p class="lead">
-                The best way to contact me is through discord, my name there is
-                booky10#6666. I also have a
-                <a href="https://discord.gg/XSB7jn9">discord server</a>, where
-                you can join. Another way to contact me is through
-                <a href="mailto:contact@booky.tk">e-mail</a>.
-              </p>
-            </div>
-            <div class="lang-de">
-              <h2>Kontakt</h2>
-              <p class="lead">
-                Der beste Weg mich zu kontaktieren ist &uuml;ber Discord, mein
-                Name dort lautet booky10#6666. Du kannst auch auf meinen
-                <a href="https://discord.gg/XSB7jn9">Discordserver</a> joinen.
-                Ein anderer Weg mich zu kontaktieren ist Durch
-                <a href="mailto:kontakt@booky.tk">E-Mail</a>.
-              </p>
-            </div>
-          </div>
-        </div>
+<section id="contact" class="bg-darker">
+  <div class="container text-white">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="i18n" translation="main.contact.title"></h2>
+        <p class="lead i18n" translation="main.contact.description"></p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <footer class="py-5 bg-primary">
-      <div class="container">
-        <p class="m-0 text-center text-white" id="copyright">
-          <script>
-            writeCopyright();
-          </script>
-        </p>
-        <address class="m-0 text-center">
-          <p id="e-mail" class="text-white">
-            E-Mail:
-            <a href="mailto:contact@booky.tk" class="text-white lang-en">
-              contact@booky.tk
-            </a>
-            <a href="mailto:kontakt@booky.tk" class="text-white lang-de">
-              kontakt@booky.tk
-            </a>
-          </p>
-        </address>
-      </div>
-    </footer>
+<footer class="py-5 bg-primary">
+  <div class="container">
+    <p class="m-0 text-center text-white i18n" id="copyright" translation="website.footer"></p>
+  </div>
+</footer>
 
-    <!-- JavaScript Scripts -->
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
+<script src="assets/js/language.js"></script>
+<script src="assets/js/scrolling.js"></script>
 
-    <script>
-      refreshLanguageText();
-    </script>
-  </body>
+</body>
 </html>
