@@ -1,11 +1,23 @@
 header {
-  padding: 156px 0 100px;
+    padding: 156px 0 100px;
 }
 
 section {
-  padding: 150px 0;
+    padding: 150px 0;
 }
 
 .nav-link {
-  color: #ffffff !important;
+    color: #FFFFFF !important;
+}
+
+.bg-darkest {
+    background-color: #292225;
+}
+
+.bg-darker {
+    background-color: #2F3136;
+}
+
+.bg-primary {
+    background-color: #004085 !important;
 }
