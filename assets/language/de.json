@@ -1,0 +1,72 @@
+{
+  "name": "Deutsch",
+  "key": "de",
+
+  "translations": {
+    "website": {
+      "name": "booky.tk",
+      "footer": "Email: <a href=\"mailto:contact@booky.tk\" target=\"_blank\">contact@booky.tk</a></br>&copy; $CURRENT_YEAR booky.tk, gemacht von booky10."
+    },
+
+    "navigation": {
+      "about": "Über",
+      "projects": "Projekte",
+      "contact": "Kontakte",
+      "language": "Sprachen",
+      "mcp": "MCP"
+    },
+
+    "main": {
+      "header": {
+        "title": "Willkommen auf der Website von booky10",
+        "description": "Ein minecraft Plugin, Client und Mod Developer"
+      },
+      "about": {
+        "title": "Über mich (booky10)",
+        "description": "Ich bin ein Minecraft developer, welcher Minecraft Clients und Plugins programmiert. Manchmal programiere ich auch Discord Bots. Die meisten Sachen, welche ich mache, sind einfach nur aus Spaß."
+      },
+      "projects": {
+        "title": "Projekte",
+        "description": "Die meistens meiner Projekte sind auf GitHub downloadbar, ich habe insgesamt aktuell 67 Repositories dort, 42 davon sind für jeden sichtbar. Das größte Projekt von allen ist im Moment der <a href=\"https://bookyclient.tk/\" target=\"_blank\">bookyClient</a>."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "description": "Der beste Weg mich zu kontaktieren ist über Discord, mein Name dort lautet booky10#6666. Du kannst auch auf meinen <a href=\"https://discord.gg/XSB7jn9\" target=\"_blank\">Discordserver</a> joinen. Ein anderer Weg mich zu kontaktieren ist Durch <a href=\"mailto:contact@booky.tk\" target=\"_blank\">Email</a>."
+      }
+    },
+
+    "mcp": {
+      "header": {
+        "title": "Willkommen auf der Website von booky10",
+        "description": "MCP (Mod Coder Pack) downloads, 1.7.10 bis 1.12"
+      },
+      "about": {
+        "title": "Über MCP",
+        "description": "Es kann Minecraft decompilieren und du kannst es erneut compilieren. Dies kann genutzt werden."
+      },
+      "downloads": {
+        "title": "Downloads",
+        "entry": "MCP $MCP_VERSION - MC $MINECRAFT_VERSION"
+      },
+      "disclaimer": "Die Downloads sind von <a href=\"http://www.modcoderpack.com/\" target=\"_blank\">modcoderpack.com</a>"
+    },
+
+    "java-versions": {
+      "header": {
+        "title": "Willkommen auf der Website von booky10",
+        "description": "Liste mit Java Versionen und den dazugehörigen Versions-Nummern"
+      },
+      "table": {
+        "description": "Java Version mit Nummern",
+        "java": {
+          "header": "Java Version",
+          "entry": "Java $VERSION"
+        },
+        "number": {
+          "header": "Versions Nummer",
+          "entry": "$VERSION"
+        }
+      }
+    }
+  }
+}
