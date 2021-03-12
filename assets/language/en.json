@@ -1,0 +1,72 @@
+{
+  "name": "English",
+  "key": "en",
+
+  "translations": {
+    "website": {
+      "name": "booky.tk",
+      "footer": "e-mail: <a href=\"mailto:contact@booky.tk\" target=\"_blank\">contact@booky.tk</a></br>&copy; $CURRENT_YEAR booky.tk, made by booky10."
+    },
+
+    "navigation": {
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contacts",
+      "language": "Language",
+      "mcp": "MCP"
+    },
+
+    "main": {
+      "header": {
+        "title": "Welcome to the website of booky10",
+        "description": "A minecraft plugin, client and mod developer"
+      },
+      "about": {
+        "title": "About me (booky10)",
+        "description": "I'm a minecraft developer, who develops minecraft clients and plugins. Sometimes I also develop discord bots. Most of the things I do are just for fun."
+      },
+      "projects": {
+        "title": "Projects",
+        "description": "Most of my projects are available on GitHub. I have 67 repositories at the moment, 42 of them are public. Currently my biggest project is the <a href=\"https://bookyclient.tk/\" target=\"_blank\">bookyClient</a>."
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "The best way to contact me is through discord, my name there is booky10#6666. I also have a <a href=\"https://discord.gg/XSB7jn9\" target=\"_blank\">discord server</a>, where you can join. Another way to contact me is through <a href=\"mailto:contact@booky.tk\" target=\"_blank\">e-mail</a>."
+      }
+    },
+
+    "mcp": {
+      "header": {
+        "title": "Welcome to the website of booky10",
+        "description": "MCP (Mod Coder Pack) downloads, 1.7.10 to 1.12"
+      },
+      "about": {
+        "title": "About MCP",
+        "description": "It can decompile minecraft and you can recompile it, to implement mods and other things."
+      },
+      "downloads": {
+        "title": "Downloads",
+        "entry": "MCP $MCP_VERSION - MC $MINECRAFT_VERSION"
+      },
+      "disclaimer": "Downloads took from <a href=\"http://www.modcoderpack.com/\" target=\"_blank\">modcoderpack.com</a>"
+    },
+
+    "java-versions": {
+      "header": {
+        "title": "Willkommen auf der Website von booky10",
+        "description": "Liste mit Java Versionen und den dazugehörigen Versions-Nummern"
+      },
+      "table": {
+        "description": "Java Versions with Numbers",
+        "java": {
+          "header": "Java Version",
+          "entry": "Java $VERSION"
+        },
+        "number": {
+          "header": "Version Number",
+          "entry": "$VERSION"
+        }
+      }
+    }
+  }
+}

@@ -1,28 +1,53 @@
-$(document).ready(function () {
-  refreshLanguageText();
-});
-
 function setLanguage(language) {
-  document.cookie = "lang=" + language + "; path=/";
-  location.reload();
+  document.cookie = 'language=' + language + '; path=/';
+  reloadText(getLanguage());
 }
 
-function refreshLanguageText() {
-  const lang_de = $(".lang-de");
-  const lang_en = $(".lang-en");
+function getLanguage() {
+  const cookies = document.cookie.split(';');
 
-  lang_de.hide();
-  lang_en.hide()
-
-  if (document.cookie.startsWith("lang=de"))
-    lang_de.show();
-  else if (document.cookie.startsWith("lang=en"))
-    lang_en.show();
-  else {
-    // noinspection JSDeprecatedSymbols
-    const userLang = navigator.language || navigator.userLanguage;
-
-    if (userLang === "de-DE") setLanguage("de")
-    else setLanguage("en")
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i];
+    while (cookie.charAt(0) === ' ') cookie = cookie.substring(1, cookie.length);
+    if (cookie.indexOf('language=') === 0) return cookie.substring(9, cookie.length);
   }
+
+  // noinspection JSDeprecatedSymbols
+  const userLang = navigator.language || navigator.userLanguage;
+  return userLang ? userLang.split('-')[0] : 'en';
 }
+
+function reloadText(language) {
+  const i18n = document.getElementsByClassName('i18n');
+
+  getJSON(location.protocol + '//' + location.host + '/assets/language/' + language + '.json', (json) => {
+    console.log('Loaded language ' + language + ': ' + JSON.stringify(json));
+
+    for (let i = 0; i < i18n.length; i++) {
+      const element = i18n.item(i), key = element.getAttribute('translation');
+      let text = eval('json.translations.' + key);
+
+      if (element.hasAttribute('arguments')) {
+        const arguments = JSON.parse(element.getAttribute('arguments'));
+        Object.keys(arguments).forEach((replaceKey) => text = text.replaceAll(replaceKey, eval('arguments.' + replaceKey)));
+      }
+
+      element.innerHTML = text;
+    }
+  });
+}
+
+function getJSON(file, callback) {
+  const request = new XMLHttpRequest();
+  request.overrideMimeType('application/json');
+
+  request.open('GET', file, true);
+  request.onreadystatechange = () => {
+    if (request.readyState !== 4 || request.status !== 200) return;
+    callback(request.responseText);
+  };
+
+  request.send(null);
+}
+
+reloadText(getLanguage());
