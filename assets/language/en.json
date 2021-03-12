@@ -1,14 +1,15 @@
 {
-  "name": "English",
-  "key": "en",
-
   "translations": {
+    "name": "English",
+    "key": "en",
+
     "website": {
       "name": "booky.tk",
       "footer": "e-mail: <a href=\"mailto:contact@booky.tk\" target=\"_blank\">contact@booky.tk</a></br>&copy; $CURRENT_YEAR booky.tk, made by booky10."
     },
 
     "navigation": {
+      "home": "Home",
       "about": "About",
       "projects": "Projects",
       "contact": "Contacts",
@@ -51,7 +52,7 @@
       "disclaimer": "Downloads took from <a href=\"http://www.modcoderpack.com/\" target=\"_blank\">modcoderpack.com</a>"
     },
 
-    "java-versions": {
+    "java_versions": {
       "header": {
         "title": "Welcome to the website of booky10",
         "description": "Table with Java Versions & Numbers"
