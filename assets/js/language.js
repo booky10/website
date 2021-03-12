@@ -21,21 +21,23 @@ function reloadText(language) {
   const i18n = document.getElementsByClassName('i18n');
   if (i18n.length <= 0) return;
 
-  getJSON(location.protocol + '//' + location.host + '/assets/language/' + language + '.json', (json) => {
-    console.log('Loaded language ' + language + ': ' + JSON.stringify(json));
+  getJSON('../assets/language/' + language + '.json')
+    .then((json) => {
+      for (let i = 0; i < i18n.length; i++) {
+        const element = i18n.item(i), key = element.getAttribute('translation');
 
-    for (let i = 0; i < i18n.length; i++) {
-      const element = i18n.item(i), key = element.getAttribute('translation');
-      let text = eval('json.translations.' + key);
+        let text = eval('json.translations.' + key);
+        text = text.replaceAll('$CURRENT_YEAR', new Date().getFullYear());
 
-      if (element.hasAttribute('arguments')) {
-        const arguments = JSON.parse(element.getAttribute('arguments'));
-        Object.keys(arguments).forEach((replaceKey) => text = text.replaceAll(replaceKey, eval('arguments.' + replaceKey)));
+        if (element.hasAttribute('arguments')) {
+          const arguments = JSON.parse(element.getAttribute('arguments'));
+          Object.keys(arguments).forEach((replaceKey) => text = text.replaceAll(replaceKey, eval('arguments.' + replaceKey)));
+        }
+
+        element.innerHTML = text;
       }
-
-      element.innerHTML = text;
-    }
-  });
+    })
+    .catch((error) => console.error(error));
 }
 
 function getJSON(file) {
