@@ -46,9 +46,9 @@
     },
     "downloads": {
       "title": "Downloads",
-      "entry": "<a href=\"http://modcoderpack.com/files/mcp$MCP_VERSION.zip\" class=\"text-white\">MCP $MCP_VERSION - MC $MINECRAFT_VERSION</a>"
+      "entry": "<a href=\"http://modcoderpack.com/files/mcp$MCP_VERSION.zip\" rel=\"noreferrer\">MCP $MCP_VERSION - MC $MINECRAFT_VERSION</a>"
     },
-    "disclaimer": "Die Downloads sind von <a href=\"http://modcoderpack.com/\" target=\"_blank\">modcoderpack.com</a>"
+    "disclaimer": "Die Downloads sind von <a href=\"http://modcoderpack.com/\" rel=\"noreferrer\" target=\"_blank\">modcoderpack.com</a>"
   },
 
   "java_versions": {
