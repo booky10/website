@@ -19,6 +19,8 @@ function getLanguage() {
 
 function reloadText(language) {
   const i18n = document.getElementsByClassName('i18n');
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
   if (i18n.length <= 0) return;
   getJSON('/assets/language/' + language + '.json')
     .then((json) => {
@@ -35,6 +37,8 @@ function reloadText(language) {
 
         element.innerHTML = text;
       }
+
+      document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
     })
     .catch((error) => console.error(error));
 }
