@@ -21,3 +21,8 @@ section {
 .bg-primary {
     background-color: #004085 !important;
 }
+
+a {
+    color: white !important;
+    text-decoration: underline !important;
+}
