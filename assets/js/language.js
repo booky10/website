@@ -20,8 +20,7 @@ function getLanguage() {
 function reloadText(language) {
   const i18n = document.getElementsByClassName('i18n');
   if (i18n.length <= 0) return;
-
-  getJSON('../assets/language/' + language + '.json')
+  getJSON('/assets/language/' + language + '.json')
     .then((json) => {
       for (let i = 0; i < i18n.length; i++) {
         const element = i18n.item(i), key = element.getAttribute('translation');
