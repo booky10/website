@@ -37,17 +37,23 @@ function reloadText(language) {
   });
 }
 
-function getJSON(file, callback) {
-  const request = new XMLHttpRequest();
-  request.overrideMimeType('application/json');
+function getJSON(file) {
+  return new Promise(((resolve, reject) => {
+    try {
+      const request = new XMLHttpRequest();
+      request.overrideMimeType('application/json');
 
-  request.open('GET', file, true);
-  request.onreadystatechange = () => {
-    if (request.readyState !== 4 || request.status !== 200) return;
-    callback(request.responseText);
-  };
+      request.open('GET', file, true);
+      request.onreadystatechange = () => {
+        if (request.readyState !== 4 || request.status !== 200) return;
+        resolve(JSON.parse(request.responseText));
+      };
 
-  request.send(null);
+      request.send(null);
+    } catch (error) {
+      reject(error);
+    }
+  }));
 }
 
 reloadText(getLanguage());
