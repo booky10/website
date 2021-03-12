@@ -27,7 +27,7 @@ function reloadText(language) {
       for (let i = 0; i < i18n.length; i++) {
         const element = i18n.item(i), key = element.getAttribute('translation');
 
-        let text = eval('json.translations.' + key);
+        let text = eval('json.' + key);
         text = text.replaceAll('$CURRENT_YEAR', new Date().getFullYear());
 
         if (element.hasAttribute('arguments')) {
