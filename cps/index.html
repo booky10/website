@@ -7,7 +7,7 @@
   <meta name="author" content="booky10"/>
 
   <link rel="shortcut icon" type="image/png" href="../assets/logo.png"/>
-  <title>booky10 - "Free" Nitro</title>
+  <title>booky10 - CPS Test</title>
 
   <style>
       body {
@@ -30,10 +30,16 @@
   </style>
 </head>
 <body>
-<h1>Click anywhere on the screen to begin.</h1>
-<h2 id="cps-container">Loading...</h2>
-<h2 id="time-container">Loading...</h2>
-<h2 id="clicks-container">Loading...</h2>
+<div id="container">
+  <div id="title">
+    <h1>Click anywhere on the screen to begin.</h1>
+  </div>
+  <div id="values">
+    <h2 id="cps-container">Loading...</h2>
+    <h2 id="time-container">Loading...</h2>
+    <h2 id="clicks-container">Loading...</h2>
+  </div>
+</div>
 
 <script>
   let start, clicks, started;
@@ -41,18 +47,11 @@
   const time = document.getElementById('time-container');
   const totalClicks = document.getElementById('clicks-container');
 
-  document.addEventListener('contextmenu', (event) => event.preventDefault());
-  document.addEventListener('click', () => {
-    if (!started) {
-      started = true;
-      start = new Date().getTime() / 1000;
-      clicks = 0;
-    }
+  document.addEventListener('contextmenu', addClick);
+  document.addEventListener('click', addClick);
+  setInterval(update, 50);
 
-    clicks += 1;
-  });
-
-  setInterval(() => {
+  function update() {
     if (!started) {
       cps.innerText = 'Current CPS: -';
       time.innerText = 'Passed Seconds: -';
@@ -63,7 +62,18 @@
       time.innerText = 'Passed Seconds: ' + passedSeconds.toFixed(3);
       totalClicks.innerText = 'Total Clicks: ' + clicks;
     }
-  }, 50);
+  }
+
+  function addClick(event = null) {
+    if (!started) {
+      started = true;
+      start = new Date().getTime() / 1000;
+      clicks = 0;
+    }
+
+    clicks += 1;
+    if (event) event.preventDefault();
+  }
 </script>
 </body>
 </html>
