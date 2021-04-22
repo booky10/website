@@ -11,9 +11,11 @@
 
   <style>
       body {
+          text-align: center;
+          font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
           background-color: #181A1B;
           color: #E8E6E3;
-          cursor: pointer;
 
           -webkit-touch-callout: none;
           -webkit-user-select: none;
@@ -22,58 +24,49 @@
           -ms-user-select: none;
           user-select: none;
       }
-
-      h1, h2 {
-          text-align: center;
-          font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-      }
   </style>
 </head>
 <body>
-<div id="container">
-  <div id="title">
-    <h1>Click anywhere on the screen to begin.</h1>
-  </div>
-  <div id="values">
-    <h2 id="cps-container">Loading...</h2>
-    <h2 id="time-container">Loading...</h2>
-    <h2 id="clicks-container">Loading...</h2>
-  </div>
-</div>
+<h1>Click anywhere on the screen to begin.</h1>
+
+<h2 id="cps">Current CPS: -</h2>
+<h2 id="time">Passed Seconds: -</h2>
+<h2 id="clicks">Total Clicks: -</h2>
 
 <script>
-  let start, clicks, started;
-  const cps = document.getElementById('cps-container');
-  const time = document.getElementById('time-container');
-  const totalClicks = document.getElementById('clicks-container');
+  let start, clicks;
+
+  const cps = document.getElementById('cps');
+  const time = document.getElementById('time');
+  const totalClicks = document.getElementById('clicks');
+
+  cps.removeAttribute('id');
+  time.removeAttribute('id');
+  totalClicks.removeAttribute('id');
 
   document.addEventListener('contextmenu', addClick);
   document.addEventListener('click', addClick);
-  setInterval(update, 50);
-
-  function update() {
-    if (!started) {
-      cps.innerText = 'Current CPS: -';
-      time.innerText = 'Passed Seconds: -';
-      totalClicks.innerText = 'Total Clicks: -';
-    } else {
-      const passedSeconds = new Date().getTime() / 1000 - start;
-      cps.innerText = 'Current CPS: ' + (clicks / passedSeconds).toFixed(2);
-      time.innerText = 'Passed Seconds: ' + passedSeconds.toFixed(3);
-      totalClicks.innerText = 'Total Clicks: ' + clicks;
-    }
-  }
 
   function addClick(event = null) {
-    if (!started) {
-      started = true;
+    if (!start) {
       start = new Date().getTime() / 1000;
-      clicks = 0;
+      clicks = 1;
+    } else {
+      clicks += 1;
     }
 
-    clicks += 1;
-    if (event) event.preventDefault();
+    if (!event) return;
+    event.preventDefault();
   }
+
+  setInterval(() => {
+    if (!start) return;
+
+    const passedSeconds = new Date().getTime() / 1000 - start;
+    cps.innerText = 'Current CPS: ' + (clicks / passedSeconds).toFixed(2);
+    time.innerText = 'Passed Seconds: ' + passedSeconds.toFixed(3);
+    totalClicks.innerText = 'Total Clicks: ' + clicks;
+  }, 10);
 </script>
 </body>
 </html>
